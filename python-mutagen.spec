@@ -30,11 +30,15 @@ APEv2 i FLAC.
 
 %package tools
 Summary:	Simple tools for reading and writing audio metadata
+Summary(pl):	Proste narzêdzia do odczytu i zapisu metadanych d¼wiêkowych
 Group:		Application/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Simple tools for reading and writting audio metadata.
+
+%description tools -l pl
+Proste narzêdzia do odczytu i zapisu metadanych d¼wiêkowych.
 
 %prep
 %setup -q -n %{module}-%{version}
