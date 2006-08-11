@@ -4,12 +4,12 @@
 Summary:	Audio metadata reader/writer
 Summary(pl):	Modu³ do odczytu i zapisu metadanych d¼wiêkowych
 Name:		python-%{module}
-Version:	1.5.1
+Version:	1.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://www.sacredchao.net/~piman/software/%{module}-%{version}.tar.gz
-# Source0-md5:	9ce5d5f14e02f2eabd919d6bdaebadbc
+# Source0-md5:	d68a4803f1b1e2678647cc92899278fb
 URL:		http://www.sacredchao.net/quodlibet/wiki/Development/Mutagen
 BuildRequires:	intltool
 BuildRequires:	pkgconfig
@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README TODO
+%doc NEWS README TODO TUTORIAL
 %{py_sitescriptdir}/%{module}
 
 %files tools
