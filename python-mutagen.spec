@@ -5,7 +5,7 @@ Summary:	Audio metadata reader/writer
 Summary(pl):	Modu³ do odczytu i zapisu metadanych d¼wiêkowych
 Name:		python-%{module}
 Version:	1.6
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://www.sacredchao.net/~piman/software/%{module}-%{version}.tar.gz
