@@ -2,7 +2,7 @@
 %define		module	mutagen
 #
 Summary:	Audio metadata reader/writer
-Summary(pl):	Modu³ do odczytu i zapisu metadanych d¼wiêkowych
+Summary(pl.UTF-8):   ModuÅ‚ do odczytu i zapisu metadanych dÅºwiÄ™kowych
 Name:		python-%{module}
 Version:	1.9
 Release:	1
@@ -22,23 +22,23 @@ Mutagen is an audio metadata tag reader and writer implemented in pure
 Python. It supports reading ID3v1.1, ID3v2.2, ID3v2.3, ID3v2.4, APEv2,
 and FLAC, and writing ID3v1.1, ID3v2.4, APEv2, and FLAC.
 
-%description -l pl
-Mutagen to modu³ do odczytu i zapisu znaczników metadanych d¼wiêkowych
-zaimplementowany w czystym Pythonie. Obs³uguje odczyt ID3v1.1,
+%description -l pl.UTF-8
+Mutagen to moduÅ‚ do odczytu i zapisu znacznikÃ³w metadanych dÅºwiÄ™kowych
+zaimplementowany w czystym Pythonie. ObsÅ‚uguje odczyt ID3v1.1,
 ID3v2.2, ID3v2.3, ID3v2.4, APEv2 i FLAC oraz zapis ID3v1.1, ID3v2.4,
 APEv2 i FLAC.
 
 %package tools
 Summary:	Simple tools for reading and writing audio metadata
-Summary(pl):	Proste narzêdzia do odczytu i zapisu metadanych d¼wiêkowych
+Summary(pl.UTF-8):   Proste narzÄ™dzia do odczytu i zapisu metadanych dÅºwiÄ™kowych
 Group:		Application/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Simple tools for reading and writting audio metadata.
 
-%description tools -l pl
-Proste narzêdzia do odczytu i zapisu metadanych d¼wiêkowych.
+%description tools -l pl.UTF-8
+Proste narzÄ™dzia do odczytu i zapisu metadanych dÅºwiÄ™kowych.
 
 %prep
 %setup -q -n %{module}-%{version}
