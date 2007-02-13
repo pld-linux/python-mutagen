@@ -2,7 +2,7 @@
 %define		module	mutagen
 #
 Summary:	Audio metadata reader/writer
-Summary(pl.UTF-8):   Moduł do odczytu i zapisu metadanych dźwiękowych
+Summary(pl.UTF-8):	Moduł do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 Version:	1.9
 Release:	1
@@ -30,7 +30,7 @@ APEv2 i FLAC.
 
 %package tools
 Summary:	Simple tools for reading and writing audio metadata
-Summary(pl.UTF-8):   Proste narzędzia do odczytu i zapisu metadanych dźwiękowych
+Summary(pl.UTF-8):	Proste narzędzia do odczytu i zapisu metadanych dźwiękowych
 Group:		Application/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
