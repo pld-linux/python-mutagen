@@ -7,13 +7,14 @@ Name:		python-%{module}
 Version:	1.10.1
 Release:	1
 License:	GPL v2
-Group:		X11/Applications/Multimedia
+Group:		Development/Languages/Python
 Source0:	http://www.sacredchao.net/~piman/software/%{module}-%{version}.tar.gz
 # Source0-md5:	989cbe553266c723ad55d34245d932d4
 URL:		http://www.sacredchao.net/quodlibet/wiki/Development/Mutagen
 BuildRequires:	intltool
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +32,7 @@ APEv2 i FLAC.
 %package tools
 Summary:	Simple tools for reading and writing audio metadata
 Summary(pl.UTF-8):	Proste narzędzia do odczytu i zapisu metadanych dźwiękowych
-Group:		Application/Multimedia
+Group:		Applications/Multimedia
 Requires:	%{name} = %{version}-%{release}
 
 %description tools
@@ -52,8 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
-
-find $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module} -name '*.py' -exec rm -f {} \;
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
