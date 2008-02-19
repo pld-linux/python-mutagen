@@ -13,7 +13,7 @@ Source0:	http://www.sacredchao.net/~piman/software/%{module}-%{version}.tar.gz
 URL:		http://www.sacredchao.net/quodlibet/wiki/Development/Mutagen
 BuildRequires:	intltool
 BuildRequires:	pkgconfig
-BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -62,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS README TODO TUTORIAL
 %{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/*.egg-info
 
 %files tools
 %defattr(644,root,root,755)
