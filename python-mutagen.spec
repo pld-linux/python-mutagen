@@ -5,7 +5,7 @@ Summary:	Audio metadata reader/writer
 Summary(pl.UTF-8):	Moduł do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 Version:	1.11
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Languages/Python
 Source0:	http://www.sacredchao.net/~piman/software/%{module}-%{version}.tar.gz
