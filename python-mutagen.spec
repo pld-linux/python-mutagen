@@ -14,6 +14,8 @@ URL:		http://code.google.com/p/mutagen/
 BuildRequires:	intltool
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
