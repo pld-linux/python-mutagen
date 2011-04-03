@@ -4,12 +4,12 @@
 Summary:	Audio metadata reader/writer
 Summary(pl.UTF-8):	Moduł do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
-Version:	1.19
-Release:	3
+Version:	1.20
+Release:	1
 License:	GPL v2
 Group:		Development/Languages/Python
 Source0:	http://mutagen.googlecode.com/files/mutagen-%{version}.tar.gz
-# Source0-md5:	68132949f3cd68491b87ff880ded4680
+# Source0-md5:	adb16d9f6056bc864a5c86c6f885af79
 URL:		http://code.google.com/p/mutagen/
 BuildRequires:	intltool
 BuildRequires:	pkgconfig
