@@ -47,14 +47,12 @@ Proste narzędzia do odczytu i zapisu metadanych dźwiękowych.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_install
 %py_postclean
 
 %clean
