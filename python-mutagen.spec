@@ -8,7 +8,7 @@ Summary:	Audio metadata reader/writer for Python 2
 Summary(pl.UTF-8):	Moduł Pythona 2 do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 Version:	1.37
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	https://bitbucket.org/lazka/mutagen/downloads/mutagen-%{version}.tar.gz
@@ -58,7 +58,7 @@ Proste narzędzia do odczytu i zapisu metadanych dźwiękowych.
 Summary:	Audio metadata reader/writer for Python 3
 Summary(pl.UTF-8):	Moduł Pythona 3 do odczytu i zapisu metadanych dźwiękowych
 Group:		Development/Languages/Python
-Requires:	python-modules >= 1:3.3
+Requires:	python3-modules >= 1:3.3
 
 %description -n python3-%{module}
 Mutagen is an audio metadata tag reader and writer implemented in pure
