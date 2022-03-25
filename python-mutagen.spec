@@ -8,7 +8,7 @@ Summary:	Audio metadata reader/writer for Python 2
 Summary(pl.UTF-8):	Moduł Pythona 2 do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 Version:	1.42.0
-Release:	5
+Release:	6
 License:	GPL v2+
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/quodlibet/mutagen/releases
