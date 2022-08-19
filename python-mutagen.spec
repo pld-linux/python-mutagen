@@ -8,12 +8,13 @@ Summary:	Audio metadata reader/writer for Python 2
 Summary(pl.UTF-8):	Moduł Pythona 2 do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 Version:	1.42.0
-Release:	7
+Release:	8
 License:	GPL v2+
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/quodlibet/mutagen/releases
 Source0:	https://github.com/quodlibet/mutagen/releases/download/release-%{version}/mutagen-%{version}.tar.gz
 # Source0-md5:	3729218f974c3a79ee9972ffa5ca5d12
+Patch0:		apev2_python39.patch
 URL:		https://github.com/quodlibet/mutagen
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
@@ -75,6 +76,7 @@ APEv2 i FLAC.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 %if %{with python2}
