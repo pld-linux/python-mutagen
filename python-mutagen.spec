@@ -7,22 +7,24 @@
 Summary:	Audio metadata reader/writer for Python 2
 Summary(pl.UTF-8):	Moduł Pythona 2 do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
-Version:	1.42.0
-Release:	8
+# keep 1.43.x here for python2 support
+Version:	1.43.1
+Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/quodlibet/mutagen/releases
 Source0:	https://github.com/quodlibet/mutagen/releases/download/release-%{version}/mutagen-%{version}.tar.gz
-# Source0-md5:	3729218f974c3a79ee9972ffa5ca5d12
-Patch0:		apev2_python39.patch
+# Source0-md5:	90e55bbd35517c2c93859f2d922969bd
 URL:		https://github.com/quodlibet/mutagen
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-modules >= 1:2.7
+BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
-BuildRequires:	python3-devel >= 1:3.4
-BuildRequires:	python3-modules >= 1:3.4
+BuildRequires:	python3-devel >= 1:3.5
+BuildRequires:	python3-modules >= 1:3.5
+BuildRequires:	python3-setuptools
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -45,10 +47,10 @@ APEv2 i FLAC.
 Summary:	Simple tools for reading and writing audio metadata
 Summary(pl.UTF-8):	Proste narzędzia do odczytu i zapisu metadanych dźwiękowych
 Group:		Applications/Multimedia
-%if %{with python2}
-Requires:	%{name} = %{version}-%{release}
-%else
+%if %{with python3}
 Requires:	python3-%{module} = %{version}-%{release}
+%else
+Requires:	%{name} = %{version}-%{release}
 %endif
 
 %description tools
@@ -61,7 +63,7 @@ Proste narzędzia do odczytu i zapisu metadanych dźwiękowych.
 Summary:	Audio metadata reader/writer for Python 3
 Summary(pl.UTF-8):	Moduł Pythona 3 do odczytu i zapisu metadanych dźwiękowych
 Group:		Development/Languages/Python
-Requires:	python3-modules >= 1:3.4
+Requires:	python3-modules >= 1:3.5
 
 %description -n python3-%{module}
 Mutagen is an audio metadata tag reader and writer implemented in pure
@@ -76,7 +78,6 @@ APEv2 i FLAC.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
 %if %{with python2}
@@ -90,17 +91,18 @@ APEv2 i FLAC.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%if %{with python3}
-%py3_install
-%endif
-
 %if %{with python2}
-%if %{with python3}
-%{__rm} $RPM_BUILD_ROOT%{_bindir}/*
-%endif
 %py_install
 
 %py_postclean
+
+%if %{with python3}
+%{__rm} $RPM_BUILD_ROOT%{_bindir}/*
+%endif
+%endif
+
+%if %{with python3}
+%py3_install
 %endif
 
 %clean
