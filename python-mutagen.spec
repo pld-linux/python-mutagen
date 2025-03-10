@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Moduł Pythona 2 do odczytu i zapisu metadanych dźwiękowych
 Name:		python-%{module}
 # keep 1.43.x here for python2 support
 Version:	1.43.1
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/quodlibet/mutagen/releases
